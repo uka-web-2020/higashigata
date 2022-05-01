@@ -1,0 +1,1712 @@
+/*
+! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+*/
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+Ensure the default browser behavior of the `hidden` attribute.
+*/
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/*===========================================================*/
+
+/*共通*/
+
+/*===========================================================*/
+
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ",
+    sans-serif;
+  color: #2ac0e4;
+  font-size: 1rem;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  word-wrap: break-word;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.8rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #2ac0e4;
+  text-decoration: none;
+  outline: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* font-family */
+
+.top-lead,
+h2,
+h3 span,
+#g-nav,
+#pc-nav,
+.openbtn,
+#footer {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.1em;
+}
+
+/* g-nav */
+
+#g-nav.panelactive li:last-child a {
+  margin: 30px 0 0 0;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  white-space: nowrap;
+}
+
+/*pc-nav*/
+
+@media screen and (max-width: 990px) {
+  #pc-nav {
+    display: none;
+  }
+}
+
+/* heading */
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  position: absolute;
+  top: 32%;
+  left: 5%;
+  line-height: 1;
+  letter-spacing: 0.2em;
+}
+
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 1.5rem;
+    top: 30%;
+  }
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* lead */
+
+.top-lead {
+  position: fixed;
+  bottom: 20%;
+  left: 10%;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 550px) {
+  .top-lead {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .top-lead {
+    font-size: 1.8rem;
+  }
+}
+
+/*===========================================================*/
+
+/*TOP*/
+
+/*===========================================================*/
+
+/* main-area */
+
+#main-area {
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/* news */
+
+#news {
+  margin: 0 0 100px 0;
+}
+
+@media screen and (max-width: 768px) {
+  #news {
+    margin: 0 0 100px 0;
+  }
+}
+
+#news h2 {
+  text-align: center;
+  margin: 0 auto 30px;
+}
+
+.bx-wrapper {
+  box-shadow: none;
+  border: none;
+  margin-bottom: inherit;
+}
+
+.news-content-wrap {
+  position: relative;
+  padding: 10px 50px;
+  width: 96%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.news-content-wrap:before,
+.news-content-wrap:after {
+  content: "";
+  width: 30px;
+  height: 40px;
+  position: absolute;
+  display: inline-block;
+}
+
+.news-content-wrap:before {
+  border-left: solid 3px #2ac0e4;
+  border-top: solid 3px #2ac0e4;
+  top: 0;
+  left: 0;
+}
+
+.news-content-wrap:after {
+  border-right: solid 3px #2ac0e4;
+  border-bottom: solid 3px #2ac0e4;
+  bottom: 0;
+  right: 0;
+}
+
+/* vision */
+
+#vision {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 0 100px 0;
+}
+
+@media screen and (max-width: 768px) {
+  #vision {
+    margin: 0 0 50px 0;
+  }
+}
+
+#vision .img {
+  width: 40%;
+  min-height: 590px;
+  background: url("../img/pict_01.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#vision .content {
+  width: 50%;
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  #vision .img {
+    width: 100%;
+    min-height: 290px;
+    margin: 0 0 50px 0;
+  }
+
+  #vision .content {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+#vision h2 {
+  margin: 0 0 30px 0;
+}
+
+#vision p {
+  line-height: 2;
+  margin: 0 0 50px 0;
+}
+
+#vision .vision-lead {
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 90px 0;
+}
+
+#vision .vision-lead::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  background: #2ac0e4;
+  width: 12em;
+  height: 3px;
+}
+
+@media screen and (max-width: 768px) {
+  #vision .vision-lead {
+    font-size: 1rem;
+  }
+
+  #vision .vision-lead::after {
+    left: 0;
+  }
+}
+
+/* service */
+
+#service h2 {
+  text-align: center;
+  margin: 0 0 70px 0;
+}
+
+@media screen and (max-width: 550px) {
+  #service h2 {
+    margin: 0 0 50px 0;
+  }
+}
+
+#service .service-area {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 0 300px 0;
+}
+
+@media screen and (max-width: 768px) {
+  #service .service-area {
+    margin: 0 0 200px 0;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  #service .service-area {
+    margin: 0 0 50px 0;
+  }
+}
+
+#service .service-area::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 23em;
+  background: #f3f3f3;
+  right: 10%;
+  top: 20%;
+  z-index: -1;
+}
+
+#service .service-area:nth-of-type(2n + 1) {
+  flex-direction: row-reverse;
+}
+
+#service .service-area .img {
+  width: 50%;
+}
+
+#service .service-area .content {
+  width: 40%;
+  background: #fff;
+  box-shadow: 0 0 20px #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 150px;
+}
+
+@media screen and (max-width: 768px) {
+  #service .service-area .content {
+    width: 47%;
+    top: 100px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  #service .service-area .img {
+    width: 100%;
+    z-index: 2;
+  }
+
+  #service .service-area .content {
+    width: 100%;
+    top: -10px;
+    -webkit-animation: none;
+            animation: none;
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+#service .service-area .content-area {
+  padding: 40px;
+}
+
+#service .service-area .content-area h3 {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0 0 30px 0;
+}
+
+#service .service-area .content-area h3 span {
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  font-size: 1.2rem;
+}
+
+#service .service-area .content-area p {
+  margin: 0 0 30px 0;
+}
+
+#service .btn {
+  text-align: right;
+}
+
+/* about */
+
+#about {
+  margin: 0 0 200px 0;
+}
+
+@media screen and (max-width: 768px) {
+  #about {
+    margin: 0 0 100px 0;
+  }
+}
+
+#about h2 {
+  text-align: center;
+  margin: 0 0 70px 0;
+}
+
+@media screen and (max-width: 550px) {
+  #about h2 {
+    margin: 0 0 50px 0;
+  }
+}
+
+#about .about-list {
+  width: 96%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#about .about-list li {
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 15px 0;
+  padding: 0 0 15px 0;
+}
+
+#about .about-list dl {
+  display: flex;
+  justify-content: space-between;
+}
+
+#about .about-list dt {
+  width: 30%;
+  padding: 0 0 0 40px;
+}
+
+@media screen and (max-width: 590px) {
+  #about .about-list dt {
+    padding: 0 0 0 10px;
+  }
+}
+
+#about .about-list dd {
+  width: 65%;
+}
+
+/* recruit */
+
+#recruit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 0 100px 0;
+}
+
+@media screen and (max-width: 768px) {
+  #recruit {
+    margin: 0 0 50px 0;
+  }
+}
+
+#recruit .img {
+  width: 40%;
+  min-height: 590px;
+  background: url("../img/pict_05.jpg") no-repeat center;
+  background-size: cover;
+}
+
+#recruit .content {
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  #recruit .img {
+    width: 100%;
+    min-height: 290px;
+    margin: 0 auto 50px;
+  }
+
+  #recruit .content {
+    width: 100%;
+    text-align: left;
+    margin: 0 auto 50px;
+  }
+}
+
+#recruit h2 {
+  margin: 0 0 30px 0;
+}
+
+#recruit p {
+  line-height: 2;
+  margin: 0 0 50px 0;
+}
+
+#recruit .recruit-lead {
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 90px 0;
+}
+
+@media screen and (max-width: 768px) {
+  #recruit .recruit-lead {
+    font-size: 1rem;
+  }
+}
+
+#recruit .recruit-lead::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  background: #2ac0e4;
+  width: 12em;
+  height: 3px;
+}
+
+/* contact */
+
+#contact {
+  margin: 0 0 100px 0;
+}
+
+#contact h2 {
+  text-align: center;
+  margin: 0 0 70px 0;
+  color: #2ac0e4;
+}
+
+@media screen and (max-width: 550px) {
+  #contact h2 {
+    margin: 0 0 50px 0;
+  }
+}
+
+#contact .form-list {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#contact input,
+button,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 16px;
+}
+
+#contact .form-list input[type="text"],
+#contact .form-list input[type="email"],
+#contact .form-list textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  color: #333;
+  padding: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#contact .form-list input[type="text"],
+input[type="email"] {
+  height: 50px;
+}
+
+#contact .submit-btn {
+  width: 152px;
+  margin: 0 auto;
+}
+
+#contact input[type="submit"] {
+  border: 2px solid #2ac0e4;
+  color: #2ac0e4;
+  text-align: center;
+  padding: 5px 20px;
+  width: 152px;
+  margin: 0 auto;
+  transition: all 0.3s;
+  border-radius: 50px;
+}
+
+#contact input[type="submit"]:hover {
+  background: #2ac0e4;
+  color: #fff;
+}
+
+#contact .form-list dl {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 0 20px 0;
+}
+
+#contact .form-list dt {
+  width: 30%;
+}
+
+#contact .form-list dd {
+  width: 66%;
+}
+
+#contact .form-list textarea {
+  height: 200px;
+}
+
+#contact .form-list dt span {
+  color: red;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #contact .form-list dt {
+    margin: 0 0 10px 0;
+  }
+
+  #contact .form-list dt,
+  #contact .form-list dd {
+    width: 100%;
+  }
+}
+
+/* footer */
+
+#footer {
+  padding: 100px 0;
+  border-top: 1px solid #2ac0e4;
+  text-align: center;
+  background: #2ac0e4;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+}
+
+#footer .footer-logo {
+  font-weight: bold;
+  letter-spacing: 0.8em;
+  margin: 0 0 50px 0;
+}
+
+/*===========================================================*/
+
+/*クリックしたらナビが下から上に出現 */
+
+/*===========================================================*/
+
+#g-nav {
+  position: fixed;
+  z-index: 999;
+  bottom: -120%;
+  width: 100%;
+  height: 100vh;
+  background: #2ac0e4;
+  transition: all 0.6s;
+}
+
+#g-nav.panelactive {
+  bottom: 0;
+}
+
+#g-nav #g-nav-list {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#g-nav ul {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#g-nav li {
+  list-style: none;
+  text-align: center;
+}
+
+#g-nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+/*===========================================================*/
+
+/* MENUが×に */
+
+/*===========================================================*/
+
+.openbtn {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  width: 80px;
+  height: 75px;
+  border-bottom: 2px solid #2ac0e4;
+}
+
+.openbtn span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+}
+
+.openbtn span:nth-of-type(1),
+.openbtn span:nth-of-type(3) {
+  height: 2px;
+  background: #fff;
+  width: 30%;
+  opacity: 0;
+  top: 22px;
+  left: 20px;
+}
+
+.openbtn span:nth-of-type(2) {
+  top: 22px;
+  left: 18px;
+  text-transform: uppercase;
+  color: #2ac0e4;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 990px) {
+  .openbtn {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .openbtn span:nth-of-type(2) {
+    font-size: 0.8rem;
+  }
+}
+
+.openbtn span:nth-of-type(3) {
+  top: 35px;
+}
+
+.openbtn.active span:nth-of-type(1),
+.openbtn.active span:nth-of-type(3) {
+  opacity: 1;
+}
+
+.openbtn.active span:nth-of-type(1) {
+  top: 28px;
+  left: 30px;
+  transform: translateY(6px) rotate(-45deg);
+}
+
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+  top: 40px;
+  left: 30px;
+  transform: translateY(-6px) rotate(45deg);
+}
+
+/*===========================================================*/
+
+/*追従メニューの現在地ハイライト*/
+
+/*===========================================================*/
+
+#header {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  z-index: 9;
+  background: #fff;
+}
+
+@media screen and (max-width: 990px) {
+  #header {
+    height: 75px;
+  }
+}
+
+#pc-nav {
+  position: absolute;
+  top: 35%;
+  right: 5%;
+}
+
+#pc-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  margin: 0 0 0 5%;
+}
+
+#pc-nav li a {
+  display: block;
+  text-decoration: none;
+  padding: 0 15px;
+  transition: all 0.3s;
+}
+
+#pc-nav li.current a,
+#pc-nav li a:hover {
+  color: #333;
+}
+
+/*===========================================================*/
+
+/*スクロールをするとエリアの高さに合わせて線が伸びる*/
+
+/*===========================================================*/
+
+.scrollgress {
+  z-index: 99;
+}
+
+/*===========================================================*/
+
+/*下線が伸びて背景に変わる*/
+
+/*===========================================================*/
+
+.btnlinestretches3 {
+  position: relative;
+  padding: 5px 30px;
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+}
+
+.btnlinestretches3 span {
+  position: relative;
+  z-index: 2;
+}
+
+.btnlinestretches3:hover span {
+  color: #fff;
+}
+
+.btnlinestretches3::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  background: #2ac0e4;
+  width: 100%;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btnlinestretches3:hover::after {
+  height: 100%;
+}
+
+/*===========================================================*/
+
+/*ページの指定の高さを超えたら右から出現*/
+
+/*===========================================================*/
+
+#page-top a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2ac0e4;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+#page-top a:hover {
+  background: #777;
+}
+
+#page-top {
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+#page-top.LeftMove {
+  -webkit-animation: LeftAnime 0.5s forwards;
+          animation: LeftAnime 0.5s forwards;
+}
+
+@-webkit-keyframes LeftAnime {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes LeftAnime {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#page-top.RightMove {
+  -webkit-animation: RightAnime 0.5s forwards;
+          animation: RightAnime 0.5s forwards;
+}
+
+@-webkit-keyframes RightAnime {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(100px);
+  }
+}
+
+@keyframes RightAnime {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(100px);
+  }
+}
+
+/*===========================================================*/
+
+/*ニュースティッカー*/
+
+/*===========================================================*/
+
+.slider a {
+  display: block;
+  background: #fff;
+  padding: 10px 0;
+}
+
+.slider a:hover {
+  color: #333;
+}
+
+.slider time {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .slider li {
+    border-bottom: 1px dashed #ccc;
+  }
+
+  .slider li:nth-child(n + 4) {
+    display: none;
+  }
+
+  .slider time {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  .news-content-wrap {
+    padding: 10px 30px 20px;
+  }
+}
+
+/*===========================================================*/
+
+/*ふわっ（正面から）（下から）・パタッ（左へ）*/
+
+/*===========================================================*/
+
+/*ふわっ（正面から）*/
+
+.bgextend {
+  -webkit-animation-name: bgextendAnimeBase;
+          animation-name: bgextendAnimeBase;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+}
+
+@-webkit-keyframes bgextendAnimeBase {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bgextendAnimeBase {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.bgappear {
+  -webkit-animation-name: bgextendAnimeSecond;
+          animation-name: bgextendAnimeSecond;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes bgextendAnimeSecond {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bgextendAnimeSecond {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ふわっ（下から） */
+
+.fadeUp {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* パタッ（左へ） */
+
+.flipLeft {
+  -webkit-animation-name: flipLeftAnime;
+          animation-name: flipLeftAnime;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  perspective-origin: left center;
+  opacity: 0;
+}
+
+@-webkit-keyframes flipLeftAnime {
+  from {
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flipLeftAnime {
+  from {
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* スマホ表示用。flipLeftTriggerを指定している親要素に指定しないとうまく動かない*/
+
+#vision,
+.service-area {
+  transform: translate3d(0, 0, 0);
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+
+.bgappearTrigger,
+.fadeUpTrigger,
+.flipLeftTrigger {
+  opacity: 0;
+}
+
+/*===========================================================*/
+
+/*スクロールすると下のエリアがヘッダーにかぶさる*/
+
+/*===========================================================*/
+
+#top-main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+#top-main:before {
+  content: "";
+  position: fixed;
+  top: 10vh;
+  left: 5%;
+  z-index: -1;
+  width: 90%;
+  height: 80vh;
+  background: url("../img/main.jpg") no-repeat center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  #top-main:before {
+    background-position: top center;
+    background-size: auto 90%;
+  }
+}
+
+#container {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+}
