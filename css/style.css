@@ -1126,6 +1126,10 @@ input[type="email"] {
   margin-left: 10px;
 }
 
+.parsley-required{
+  color: red;
+}
+
 @media screen and (max-width: 768px) {
   #contact .form-list dt {
     margin: 0 0 10px 0;
