@@ -180,13 +180,14 @@ function fadeAnime() {
 }
 
 /*===========================================================*/
-/*フォーム送信でテキスト表示*/
+/*フォーム送信後テキスト表示*/
 /*===========================================================*/
 
-function showThxMessage() {
-  document.googleForm.submit();
-  document.getElementById("form").style.display = "none";
-  document.getElementById("thxMessage").style.display = "block";
+function showMessage() {
+  if ($("form").parsley().isValid()) {
+    document.getElementById("form").style.display = "none";
+    document.getElementById("thxMessage").style.display = "block";
+  }
 }
 
 /*===========================================================*/
